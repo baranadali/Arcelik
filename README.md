@@ -1,8 +1,16 @@
-# React + Vite
+# Arçelik Klon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="./src/assets/images/arcelik-banner.jpg" alt="Arçelik - İyiliği Aşkla Tasarlar" style="border-radius: 12px; border: 1px solid #e5e7eb" />
 
-Currently, two official plugins are available:
+## Genel Bakış
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `/` - Anasayfa.
+
+## Yerel Olarak Çalıştırma
+
+```bash
+$ git clone https://github.com/baranadali/Arcelik.git
+$ cd muons
+$ npm create vite .
+$ npm run dev
+```
