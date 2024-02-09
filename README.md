@@ -10,7 +10,7 @@
 
 ```bash
 $ git clone https://github.com/baranadali/Arcelik.git
-$ cd muons
+$ cd arcelik
 $ npm create vite .
 $ npm run dev
 ```
