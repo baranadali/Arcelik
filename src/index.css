@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: "GraphikRegular";
+    src: url("./assets/fonts/graphik-regular.otf");
+}
+@font-face {
+    font-family: "GraphikSemibold";
+    src: url("./assets/fonts/graphik-semibold.otf");
+}
+@font-face {
+    font-family: "HeronsansSemibold";
+    src: url("./assets/fonts/heronsans-semibold.otf");
+}
+
