@@ -20,5 +20,3 @@ export default function Slider() {
         </div>
     )
 }
-
-// git commit -m 'Responsive alanında iyileştirmeler yapıldı.'
