@@ -24,7 +24,7 @@ export default function Header() {
                             </li>
                         ))}
                         <div className='flex items-center gap-4'>
-                            <HiMenuAlt4 className='text-white text-lg hidden mobile:visible' />
+                            <HiMenuAlt4 className='text-white text-xl hidden mobile:block' />
                             <RiNotificationLine className='hover:text-opacity-70 cursor-pointer text-white text-lg' />
                         </div>
                     </ul>
