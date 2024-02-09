@@ -12,7 +12,7 @@ export default function Slider() {
                </div>
             </div>
             <div className='h-full '>
-                <video className='bg-red-300 object-cover !h-full' width='100%' height='100%' loop autoPlay muted>
+                <video className='object-cover !h-full' width='100%' height='100%' loop autoPlay muted playsInline>
                     <source src={Video} />
                 </video>
             </div>
@@ -20,3 +20,5 @@ export default function Slider() {
         </div>
     )
 }
+
+// git commit -m 'Responsive alanında iyileştirmeler yapıldı.'
