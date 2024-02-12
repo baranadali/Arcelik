@@ -16,3 +16,6 @@
     src: url("./assets/fonts/heronsans-semibold.otf");
 }
 
+.header-active {
+    background-color: white !important;
+}

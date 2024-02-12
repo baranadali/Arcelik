@@ -12,36 +12,49 @@ import { useState } from 'react';
 
 
 export default function Header() {
+
+
+    // Scroll animated header
+    const [header, setHeader] = useState(false)
+
+    const changeBackground = () => {
+        if (window.scrollY >= 70) {
+            setHeader(true)
+        } else { setHeader(false) }
+    }
+
+    window.addEventListener('scroll', changeBackground)
     
     return (
-        <div className="z-10 top-0 fixed w-full">
+        // className="z-10 top-0 fixed w-full"
+        <div className={header ? 'z-30 top-0 fixed w-full bg-white' : 'z-30 top-0 fixed w-full bg-transparent'}>
             <div  className="h-[61px] bg-transparent border-gray-50 border-opacity-30 border-b  max-w-[calc(100%-60px)] mx-auto flex items-center justify-between">
                 <div>
                     <ul className='flex items-center gap-5'>
                         {NavMenuLeft.map((item, index) => (
                             <li className='mobile:hidden' key={index}>
-                                <a className='text-sm text-white hover:text-opacity-70' href="#">{item.name}</a>
+                                <a className={header ? 'text-black text-sm hover:text-opacity-70' : 'text-white text-sm hover:text-opacity-70'} href="#">{item.name}</a>
                             </li>
                         ))}
                         <div className='flex items-center gap-4'>
-                            <HiMenuAlt4 className='text-white text-xl hidden mobile:block' />
-                            <RiNotificationLine className='hover:text-opacity-70 cursor-pointer text-white text-lg' />
+                            <HiMenuAlt4 className={header ? 'text-black text-xl hidden mobile:block' : 'text-white text-xl hidden mobile:block'}/>
+                            <RiNotificationLine className={header ? 'text-black text-lg cursor-pointer hover:text-opacity-70' : 'text-white text-lg cursor-pointer hover:text-opacity-70'} />
                         </div>
                     </ul>
                 </div>
                 <div className=''>
-                    <Logo/>
+                    <Logo color={header ? 'black' : 'white'}/>
                 </div>
                 <div>
                     <ul className='flex items-center gap-5'>
                         {NavMenuRight.map((item, index) => (
                             <li className='mobile:hidden' key={index}>
-                                <a className='hover:text-opacity-70 text-sm text-white' href="#">{item.name}</a>
+                                <a className={header ? 'text-black text-sm hover:text-opacity-70' : 'text-white text-sm hover:text-opacity-70'} href="#">{item.name}</a>
                             </li>
                         ))}  
                         <div className='flex items-center gap-4'>
-                            <LuSearch className='hover:text-opacity-70 cursor-pointer text-white text-lg' />
-                            <PiBagSimple className='hover:text-opacity-70 cursor-pointer text-white text-lg' />
+                            <LuSearch className={header ? 'text-black text-lg cursor-pointer hover:text-opacity-70' : 'text-white text-lg cursor-pointer hover:text-opacity-70'} />
+                            <PiBagSimple className={header ? 'text-black text-lg cursor-pointer hover:text-opacity-70' : 'text-white text-lg cursor-pointer hover:text-opacity-70'} />
                         </div>
                     </ul>
                 </div>
